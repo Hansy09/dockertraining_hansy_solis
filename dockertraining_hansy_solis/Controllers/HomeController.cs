@@ -22,7 +22,7 @@ namespace dockertraining_hansy_solis.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.EnvirionmentVariable = _configuration.GetSection("AppSettings").GetSection("StoreName").Value;
+            ViewBag.StoreName = _configuration.GetSection("AppSettings").GetSection("StoreName").Value;
 
             return View();
         }
